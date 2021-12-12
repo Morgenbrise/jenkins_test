@@ -13,6 +13,4 @@ public class HellowContoller {
     public ResponseEntity<String> hello() {
         return ResponseEntity.ok("hello");
     }
-
-
 }
