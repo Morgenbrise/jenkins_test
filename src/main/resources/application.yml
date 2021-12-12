@@ -1,0 +1,34 @@
+spring:
+
+  datasource:
+#    url: jdbc:mariadb://172.16.73.5:51036/language
+#    driver-class-name: org.mariadb.jdbc.Driver
+#    username: language
+#    password: language
+    url: jdbc:oracle:thin:@db202111112253_high?TNS_ADMIN=/Users/chosejong/Desktop/자료실/Oracle/database/Wallet_DB202111112253
+#    url: jdbc:oracle:thin:@db202111112253_high?TNS_ADMIN=/tomcat/oracle/Wallet_DB202111112253
+    driver-class-name: oracle.jdbc.OracleDriver
+    username: jenkins
+    password: Test1234
+    hikari:
+      connection-test-query: SELECT sysdate FROM dual
+
+  jpa:
+#    database-platform: org.hibernate.dialect.MariaDBDialect
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+    defer-datasource-initialization: true
+
+jwt:
+  header: Authorization
+  secret: c2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQtc2lsdmVybmluZS10ZWNoLXNwcmluZy1ib290LWp3dC10dXRvcmlhbC1zZWNyZXQK
+  token-validity-in-seconds: 86400
+
+logging:
+  level:
+    com.security.jwt: DEBUG

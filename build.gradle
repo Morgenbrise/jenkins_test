@@ -1,0 +1,53 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.security.jwt'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    // https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt
+//    implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.2'
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.2'
+    runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.2'
+
+    // https://mvnrepository.com/artifact/com.oracle.ojdbc/ojdbc8
+    implementation group: 'com.oracle.ojdbc', name: 'ojdbc10'
+    // https://mvnrepository.com/artifact/com.oracle/oraclepki
+    implementation group: 'com.oracle.database.security', name: 'oraclepki'
+    // https://mvnrepository.com/artifact/com.oracle.ojdbc/osdt_core
+    implementation group: 'com.oracle.database.security', name: 'osdt_core'
+    // https://mvnrepository.com/artifact/com.oracle.jdbc/osdt_cert
+    implementation group: 'com.oracle.database.security', name: 'osdt_cert'
+    implementation group: 'com.oracle.database.ha', name: 'ons'
+}
+
+test {
+    useJUnitPlatform()
+}
