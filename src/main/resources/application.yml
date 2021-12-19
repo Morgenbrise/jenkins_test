@@ -5,8 +5,8 @@ spring:
 #    driver-class-name: org.mariadb.jdbc.Driver
 #    username: language
 #    password: language
-    url: jdbc:oracle:thin:@db202111112253_high?TNS_ADMIN=/Users/chosejong/Desktop/자료실/Oracle/database/Wallet_DB202111112253
-#    url: jdbc:oracle:thin:@db202111112253_high?TNS_ADMIN=/tomcat/oracle/Wallet_DB202111112253
+#    url: jdbc:oracle:thin:@db202111112253_high?TNS_ADMIN=/Users/chosejong/Desktop/자료실/Oracle/database/Wallet_DB202111112253
+    url: jdbc:oracle:thin:@db202111112253_high?TNS_ADMIN=/tomcat/oracle/Wallet_DB202111112253
     driver-class-name: oracle.jdbc.OracleDriver
     username: jenkins
     password: Test1234
