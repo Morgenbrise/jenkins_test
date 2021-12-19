@@ -46,6 +46,9 @@ dependencies {
     // https://mvnrepository.com/artifact/com.oracle.jdbc/osdt_cert
     implementation group: 'com.oracle.database.security', name: 'osdt_cert'
     implementation group: 'com.oracle.database.ha', name: 'ons'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
 test {
