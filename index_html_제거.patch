@@ -1,0 +1,16 @@
+Index: src/main/resources/templates/index.html
+===================================================================
+--- src/main/resources/templates/index.html	(revision 339df97e20dad0abe43afefe300e63ff56749f7a)
++++ src/main/resources/templates/index.html	(revision 339df97e20dad0abe43afefe300e63ff56749f7a)
+@@ -1,10 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <title>Title</title>
+-</head>
+-<body>
+-
+-</body>
+-</html>
+\ No newline at end of file
